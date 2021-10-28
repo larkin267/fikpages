@@ -1,7 +1,7 @@
 markdown: kramdown
 
 url: https://larkin269.github.io/  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: /fikpages/      # place folder name if the site is served in a subfolder
+baseurl: fikpages      # place folder name if the site is served in a subfolder
 
 # Title of the Site
 title: '#Fik 握手会'
