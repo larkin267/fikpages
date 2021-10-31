@@ -3,50 +3,81 @@
 
 @import "main.scss";
 
+
+
 #hero {
     background: rgb(255, 255, 255);
-    background-image: url('../images/hero_background.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
+    background-size: cover;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
 }
 
-.fik-title1 {
-    text-align: center;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
+@media only screen and (min-width: 768px) {
+    #hero {
+        background-image: url('../assets/images/hero_background_big.jpg');
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #hero {
+        background-image: url('../assets/images/hero_background_small.jpg');
+    }
 }
 
 #prologue {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.fik-video {
+    margin-top: 3%;
+}
+
+#introduction {
+    background-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 #screenplay {
-    background-color: white;
+    background-color: black;
     padding-top: 5%;
+    padding-bottom: 5%;
 }
 
-.fik-title2 {
-    margin-bottom: 3%;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
+#googleform {
+    background-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .fik-title3 {
+    line-height: 170%;
     margin-top: 3%;
-    margin-left: 16%;
-    margin-bottom: 3%;
-    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.introduction-text {
+    margin-left: 10%;
+    margin-top: 3%;
+    margin-right: 10%;
+    color: white;
+    font-size: 1rem;
+    line-height: 170%;
 }
 
 .screenplay-text {
-    margin-left: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+    font-size: 1rem;
+    line-height: 170%;
 }
