@@ -7,115 +7,146 @@ layout: default
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>#Fik 握手会</title>
+    <title>#FiK 握手会</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
   </head>
   <body>
-  <section class="hero is-fullheight has-text-centered" id="hero">
-    <div class="hero-body">
-      <div class="container">
-        <img src="{{site.url}}{{site.baseurl}}/assets/images/title.png" alt="#Fik 握手会" width="230vw">
-        <br>
-        <a href="{{site.url}}{{site.baseurl}}/#prologue" class="button is-black is-rounded is-outlined has-text-weight-normal is-medium">次へ</a>
+    <div class="container">
+      <div id="block1">
+        <!--<img src="/assets/images/b1_bg.svg" width="100%" height="100%">-->
+        <span class="block1-btn-text">
+          <img src="{{site.url}}{{site.baseurl}}/assets/images/block1_button_background.png" alt="ZOOMにて握手会を体験する（一日3部）">
+        </span>
+        <span class="block1-btn">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsRHOD9ZC0ELTXSh7_X4JA-YIPwar_mn3j1H-_cDPsos2lOA/viewform?usp=sf_link" target="_blank">
+            <img src="{{site.url}}{{site.baseurl}}/assets/images/block1_button.png" alt="申し込み">
+          </a>
+        </span>
       </div>
-    </div>
-  </section>
-  <section id="prologue">
-    <div class="prologue-body">
-      <div class="container is-fluid">
-        <img src="{{site.url}}{{site.baseurl}}/assets/images/title2_prologue.png" alt="プロローグ" width="230vw">
+      <div class="block1-tit">
+        <img src="{{site.url}}{{site.baseurl}}/assets/images/block1_tit.png" width="100%" alt="#FiK">
       </div>
-      <div class="container is-fluid has-text-centered">
-        <div class="fik-video">
-          <video width="100%" controls>
-            <source src='{{site.url}}{{site.baseurl}}/assets/images/sample.mp4' type="video/mp4">
-            プロローグ動画
-          </video>
+      
+
+      <div id="block2">
+        <!--<img src="/assets/images/b2_bg.svg" width="100%" height="100%">-->
+        <div class="block2-top-video">
+          <div class="video-wrap">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ELtyrpuX20A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="block2-btn">
+          <div class="block2-btn-only">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsRHOD9ZC0ELTXSh7_X4JA-YIPwar_mn3j1H-_cDPsos2lOA/viewform?usp=sf_link" target="_blank">
+              <img src="{{site.url}}{{site.baseurl}}/assets/images/block2_button.png" alt="申し込み">
+            </a>
+          </div>
+        </div>
+        <div class="block2-intro">
+            あなたはアイドルグループ#FiKのメンバーです。<br>
+            今日は握手会。アイドルとして、ファンを楽しませよう！<br>
+            <br>
+            ①下の１〜３から好きな台本を一つ選ぼう<br>
+            ②参加申し込みフォームから、ニックネーム、メールアドレス、体験を希望する時間帯を入力して、参加申し込みをしよう<br>
+            体験の時間帯：各日①13:00~13:30 ②16:00~16:30 ③19:00~19:30 （各回15分前に受付終了）<br>
+          <div id="introduction">
+            ③体験開始10分前に、登録したメールアドレスに(fik.idol.iiiex@gmail.com)からメールが届くよ。参加する時間帯と、ZoomのURLが届くので確認してね。<br>
+            ④参加する時間帯の集合時間になったら指定されたZoomに入室しよう。最初にルール説明があるのでよく聞いてね。<br>
+            ⑤ルール説明が終わったら、指定されたブレイクアウトルームに入って少し待っていてね。ファンと運営が入ってきたら、体験スタート！選んだ台本に沿ってファンとの交流を楽しんで！<br>
+            ⑥体験が終わったら終了！#(登録したニックネーム)_FiK でTwitterでエゴサしてみたらファンの反応が見れるかも！<br>
+          </div>
+          <button id="introduction-btn">more</button>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="introduction">
-    <div class="introduction-body">
-      <div class="container is-fluid">
-        <img src="{{site.url}}{{site.baseurl}}/assets/images/title2_introduction.png" alt="体験方法" width="230vw">
-        <div class="">
-          <p class="introduction-text">
-          あなたはアイドルグループ#FiKのメンバーです。<br>
-          今日は握手会。アイドルとして、ファンを楽しませよう！<br>
-          <br>
-          ①下の１〜３から好きな台本を一つ選ぼう<br>
-          ②参加申し込みフォームから、ニックネーム、メールアドレス、体験を希望する時間帯を入力して、参加申し込みをしよう<br>
-          体験の時間帯：各日①13:00~13:30 ②16:00~16:30 ③19:00~19:30 （各回15分前に受付終了）<br>
-          ③体験開始10分前に、登録したメールアドレスに(fik.idol.iiiex@gmail.com)からメールが届くよ。参加する時間帯と、ZoomのURLが届くので確認してね。<br>
-          ④参加する時間帯の集合時間になったら指定されたZoomに入室しよう。最初にルール説明があるのでよく聞いてね。<br>
-          ⑤ルール説明が終わったら、指定されたブレイクアウトルームに入って少し待っていてね。ファンと運営が入ってきたら、体験スタート！選んだ台本に沿ってファンとの交流を楽しんで！<br>
-          ⑥体験が終わったら終了！#(登録したニックネーム)_FiK でTwitterでエゴサしてみたらファンの反応が見れるかも！<br>
-          </p>
+      <div class="block2-tit">
+        <img src="{{site.url}}{{site.baseurl}}/assets/images/block2_tit.png" width="100%" alt="プロローグ">
+      </div>
+      
+
+      <div id="block3">
+        <!--<img src="/assets/images/b3_bg.svg" width="100%" height="100%">-->
+        <div id="tab">
+          <div id="tab-header">  
+            <ul id="tab-header-li">  
+                <li id="tab1" value="1" class="selected">①初めて特典会にきたファン</li>  
+                <li id="tab2" value="2">②常連ファン</li>  
+                <li id="tab3" value="3">③久しぶりのファン</li>  
+            </ul>  
+          </div>  
+          <div id="tab-content">
+            <div id="content1" style="display: block;">
+              スタッフ「では今から30秒です」<br>
+              アイドル「わ〜きてくれてありがとう！初めまして！」<br>
+              ファン　「は、はじめまして！！いつも応援してます！」<br>
+              アイドル「そっかーありがとう！」<br>
+              ファン　「新曲の落ちサビのソロパート、歌詞が〇〇ちゃんに合ってて大好きです！」<br>
+              アイドル「私もあのパート好きなの！そう言ってもらえて嬉しいなあ」<br>
+              ファン　「また歌聴きにライブきます！」<br>
+              アイドル「（自由パートで一言）」<br>
+              スタッフ「お時間でーす」<br>
+              アイドル「またね〜！」<br>
+            </div>
+            <div id="content2">
+              スタッフ「では今から30秒です」<br>
+              ファン　「〇〇ちゃん〜！来たよ〜！」<br>
+              アイドル「△△さん！いつもありがとう！今日もおしゃれだね！」<br>
+              ファン　「〇〇ちゃんの今日の髪型も決まってるよ！超可愛かった！！メイクもキラキラしてて、一番輝いてた！！」<br>
+              アイドル「△△さん、いっつも〇〇が言ってほしい言葉言ってくれるからほんと大好き！」<br>
+              ファン　「全部ほんとだから仕方ないよね〜。いつも可愛くてキラキラでこっちこそほんとに大好き！！」<br>
+              アイドル「アハハッ！ありがとう〜！（自由に一言）」<br>
+              スタッフ「お時間でーす」<br>
+              アイドル「また来てね！」<br>
+            </div>
+            <div id="content3">
+              スタッフ「では今から30秒です」<br>
+              ファン　「〇〇ちゃん〜こんにちは！」<br>
+              アイドル「△△さんだ！え、結構久しぶりですよね？」<br>
+              ファン　「覚えててくれたの！？そう、半年ぶりくらいになっちゃった。仕事忙しくてさ、、、」<br>
+              アイドル「そっかー今日来てくれてすごい嬉しい！」<br>
+              ファン　「ダンスめっちゃ上手くなっててびっくりしたよ！」<br>
+              アイドル「ほんと？」<br>
+              ファン　「ほんとほんと。ねー、最後に仕事頑張れちゃうセリフみたいなの、言ってもらってもいいかなあ」<br>
+              アイドル「（自由に一言）」<br>
+              ファン　「は〜ありがとう！これで明日からも頑張るわ！」<br>
+              スタッフ「お時間でーす」<br>
+              アイドル「またねー！」<br>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="screenplay">
-    <div class="screenplay-body">
-      <div class="container is-fluid">
-        <img src="{{site.url}}{{site.baseurl}}/assets/images/title2_screenplay.png" alt="台本" width="230vw">
-        <div class="">
-          <h3 class="fik-title3">
-            ①初めて特典会にきたファン/ 歌唱力に定評のあるアイドル
-          </h3>
-          <p class="screenplay-text">
-            スタッフ「では今から30秒です」<br>
-            アイドル「わ〜きてくれてありがとう！初めまして！」<br>
-            ファン　「は、はじめまして！！いつも応援してます！」<br>
-            アイドル「そっかーありがとう！」<br>
-            ファン　「新曲の落ちサビのソロパート、歌詞が〇〇ちゃんに合ってて大好きです！」<br>
-            アイドル「私もあのパート好きなの！そう言ってもらえて嬉しいなあ」<br>
-            ファン　「また歌聴きにライブきます！」<br>
-            アイドル「（自由パートで一言）」<br>
-            スタッフ「お時間でーす」<br>
-            アイドル「またね〜！」<br>
-          </p>
-          <h3 class="fik-title3">
-            ②常連ファン/ アイドル
-          </h3>
-          <p class="screenplay-text">
-            スタッフ「では今から30秒です」<br>
-            ファン　「〇〇ちゃん〜！来たよ〜！」<br>
-            アイドル「△△さん！いつもありがとう！今日もおしゃれだね！」<br>
-            ファン　「〇〇ちゃんの今日の髪型も決まってるよ！超可愛かった！！メイクもキラキラしてて、一番輝いてた！！」<br>
-            アイドル「△△さん、いっつも〇〇が言ってほしい言葉言ってくれるからほんと大好き！」<br>
-            ファン　「全部ほんとだから仕方ないよね〜。いつも可愛くてキラキラでこっちこそほんとに大好き！！」<br>
-            アイドル「アハハッ！ありがとう〜！（自由に一言）」<br>
-            スタッフ「お時間でーす」<br>
-            アイドル「また来てね！」<br>
-          </p>
-          <h3 class="fik-title3">
-            ③久しぶりのファン/ アイドル
-          </h3>
-          <p class="screenplay-text">
-            スタッフ「では今から30秒です」<br>
-            ファン　「〇〇ちゃん〜こんにちは！」<br>
-            アイドル「△△さんだ！え、結構久しぶりですよね？」<br>
-            ファン　「覚えててくれたの！？そう、半年ぶりくらいになっちゃった。仕事忙しくてさ、、、」<br>
-            アイドル「そっかー今日来てくれてすごい嬉しい！」<br>
-            ファン　「ダンスめっちゃ上手くなっててびっくりしたよ！」<br>
-            アイドル「ほんと？」<br>
-            ファン　「ほんとほんと。ねー、最後に仕事頑張れちゃうセリフみたいなの、言ってもらってもいいかなあ」<br>
-            アイドル「（自由に一言）」<br>
-            ファン　「は〜ありがとう！これで明日からも頑張るわ！」<br>
-            スタッフ「お時間でーす」<br>
-            アイドル「またねー！」<br>
-          </p>
-        </div>
+      <div class="block3-tit" id="block3-tit">
+        <img src="{{site.url}}{{site.baseurl}}/assets/images/block3_tit.png" width="100%" alt="台本">
+      </div>
+      <div id="footer">
       </div>
     </div>
-  </section>
-  <section id="googleform">
-    <div class="container has-text-centered">
-      <hr>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdsRHOD9ZC0ELTXSh7_X4JA-YIPwar_mn3j1H-_cDPsos2lOA/viewform?embedded=true" width="100%" height="1800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-    </div>
-  </section>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#introduction-btn").click(function(){
+        $("#introduction").slideToggle();
+        if ($("#introduction-btn").text() == "more") {
+          $("#block2").css("grid-row-end","span 12");
+          $("#block3").css("grid-row-start","18");
+          $("#footer").css("grid-row-start","26");
+          $("#block3-tit").css("grid-row-start","17");
+          $("#introduction-btn").text("less");
+        } else {
+          $("#block2").css("grid-row-end","span 10");
+          $("#block3").css("grid-row-start","16");
+          $("#footer").css("grid-row-start","23");
+          $("#block3-tit").css("grid-row-start","15");
+          $("#introduction-btn").text("more");
+        }
+        });
+      });
+    </script>
+    <script>
+      $("#tab-header-li>li").click(function(){
+      console.log(this);
+      $("#content"+$(this).val()).attr('style','display:block').siblings("div").removeAttr("style");
+      $(this).addClass('selected').siblings().removeClass('selected');
+      });
+    </script>
   </body>
 </html>

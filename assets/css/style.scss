@@ -3,111 +3,298 @@
 
 @import "main.scss";
 
-
-#hero {
-    background: rgb(255, 255, 255);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, auto) [left] repeat(8, 120px) [right] repeat(2, auto);
+    grid-template-rows: 100px repeat(2, 100px);
+    grid-auto-rows: 100px;
+    background-color: #131313;
 }
 
-#prologue {
-    background-color: rgb(20, 20, 20);
-    padding-top: 5%;
-    padding-bottom: 5%;
+#block1 {
+    grid-column-start: left;
+    grid-column-end: right;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    background-image: url(../images/b1_bg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.block1-tit {
+    grid-column-start: left;
+    grid-column-end: span 3;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+
+    justify-self: start;
+    align-self: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.block1-btn-text{
+    width: 51%;
+}
+
+.block1-btn{
+    width: 17%;
+}
+
+#block2 {
+    grid-column-start: left;
+    grid-column-end: right;
+    grid-row-start: 5;
+    grid-row-end: span 10;
+    background-image: url(../images/b2_bg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 100px;
+}
+
+.block2-top-video {
+    grid-column-start: 2;
+    grid-column-end: span 6;
+    grid-row-start: 2;
+    grid-row-end: span 4;
+}
+
+.block2-btn {
+    grid-column-start: 2;
+    grid-column-end: span 6;
+    grid-row-start: 6;
+    grid-row-end: span 1;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.block2-btn-only {
+    padding-top: 10em;
+    width: 40.8%;
+}
+
+.block2-intro {
+    grid-column-start: 2;
+    grid-column-end: span 6;
+    grid-row-start: 7;
+    grid-row-end: span 3;
+
+    padding-top: 3em;
+
+    color: white;
+    font-size: 2.4em;
+    line-height: 180%;
+    font-weight: 300;
+}
+
+.block2-tit {
+    grid-column-start: span 2;
+    grid-column-end: right;
+    grid-row-start: 4;
+    grid-row-end: span 2;
+
+    justify-self: end;
+    align-self: center;
 }
 
 #introduction {
-    background-color: rgb(20, 20, 20);
-    padding-top: 5%;
-    padding-bottom: 5%;
+    display: none;
+    background-color: #131313;
 }
 
-#screenplay {
-    background-color: rgb(20, 20, 20);
-    padding-top: 5%;
-    padding-bottom: 5%;
+.video-wrap {
+    position: relative;
+    padding-bottom: 55%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
 }
 
-#googleform {
-    background-color: rgb(20, 20, 20);
-    padding-top: 5%;
-    padding-bottom: 5%;
+.video-wrap iframe {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-    #hero {
-        background-image: url('../images/hero_background_big.jpg');
-    }
-    
-    .fik-video {
-        margin: 3% 5%;
-    }
+#block3 {
+    grid-column-start: left;
+    grid-column-end: right;
+    grid-row-start: 16;
+    grid-row-end: span 7;
+    background-image: url(../images/b3_bg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
-    .fik-title3 {
-        line-height: 170%;
-        margin-top: 3%;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 1.2rem;
-        color: white;
-    }
-    
-    .introduction-text {
-        margin-left: 10%;
-        margin-top: 3%;
-        margin-right: 10%;
-        color: white;
-        font-size: 1rem;
-        line-height: 170%;
-    }
-    
-    .screenplay-text {
-        margin-left: 10%;
-        margin-right: 10%;
-        color: white;
-        font-size: 1rem;
-        line-height: 170%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 100px;
+    //justify-content: center;
+    //align-items: start;
+}
+
+#tab {
+    grid-column-start: 2;
+    grid-column-end: span 6;
+    grid-row-start: 2;
+    grid-row-end: span 5;
+}
+
+#tab-header{  
+    text-align: center;  
+    color: white; 
+}  
+
+#tab-header-li {
+    padding: 0;
+    display: inline-block;
+}
+
+#tab-header-li li{
+    float: left;
+    list-style: none;
+    width: 13.4em;
+    height: 2em;
+    cursor: pointer;
+    text-align: center;
+    font-size: 2.6em;
+}
+
+#tab-header-li li.selected{  
+    font-weight: 500;  
+    border-style:none none solid none;
+    border-bottom: 3;   
+    border-bottom-color: #FF7CA2;  
+}  
+  
+#tab-header-li li:hover{  
+    color: orangered;  
+}  
+
+#content1,#content2,#content3{
+    padding-top: 3em;
+
+    color: white;
+    font-size: 2.6em;
+    line-height: 180%;
+    font-weight: 300;
+
+    display: none;
+}
+
+.block3-tit {
+    grid-column-start: span 2;
+    grid-column-end: right;
+    grid-row-start: 15;
+    grid-row-end: span 2;
+
+    justify-self: end;
+    align-self: center;
+}
+
+#footer {
+    grid-row-start: 23;
+    grid-row-end: span 2;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 3px) [left] repeat(8, 1fr) [right] repeat(2, 3px);
+        grid-template-rows: 50px repeat(2, 100px);
+        grid-auto-rows: 100px;
+        background-color: #131313;
     }
 }
 
-@media only screen and (max-width: 768px) {
-    #hero {
-        background-image: url('../images/hero_background_small.jpg');
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 3px) [left] repeat(8, 1fr) [right] repeat(2, 3px);
+        grid-template-rows: 50px repeat(2, 144px);
+        grid-auto-rows: 144px;
+        background-color: #131313;
     }
 
-    .fik-video {
-        margin: 3% 0%;
+    #block1 {    
+        background-image: url(../images/m_b1_bg.svg);
+        align-content: flex-start;
+        flex-wrap: wrap;
     }
 
-    .fik-title3 {
-        line-height: 150%;
-        margin-top: 4%;
-        margin-bottom: 1%;
-        margin-left: .75rem;
-        margin-right: .75rem;
-        font-size: 1rem;
-        color: white;
+    .block1-btn-text{
+        margin-top: 84px;
+        width: 81%;
     }
     
-    .introduction-text {
-        margin-left: .75rem;
-        margin-top: 3%;
-        margin-right: .75rem;
-        color: white;
-        font-size: .75rem;
-        line-height: 170%;
+    .block1-btn{
+        margin-top: 20px;
+        width: 51.9%;
+    }
+
+    #block2 {
+        background-image: url(../images/m_b2_bg.svg);
+
+        grid-template-columns: 12px repeat(6, 1fr) 12px;
+        grid-auto-rows: 50px;
+    }
+
+    .block2-btn {
+        grid-column-start: 2;
+        grid-column-end: span 6;
+        grid-row-start: 6;
+        grid-row-end: span 2;
+    
+        display: flex;
+        justify-content: center;
+    }
+
+    .block2-btn-only {
+        width: 54%;
     }
     
-    .screenplay-text {
-        margin-left: .75rem;
-        margin-right: .75rem;
+    .block2-intro {
+        grid-column-start: 2;
+        grid-column-end: span 6;
+        grid-row-start: 8;
+        grid-row-end: span 5;
+    
         color: white;
-        font-size: .75rem;
-        line-height: 170%;
+        font-size: 2.4em;
+        line-height: 180%;
+        font-weight: 300;
+    }
+
+    #block3 {
+        background-image: url(../images/b3_bg.svg);
+
+        grid-template-columns: 12px repeat(6, 1fr) 12px;
+        grid-auto-rows: 100px;
+    }
+
+    #tab-header-li li{
+        width: 24%;
+        height: 5em;
+        cursor: pointer;
+        text-align: center;
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+        font-size: 2.2em;
     }
 }
