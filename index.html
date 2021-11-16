@@ -14,15 +14,18 @@ layout: default
   <body>
     <div class="container">
       <div id="block1">
-        <!--<img src="/assets/images/b1_bg.svg" width="100%" height="100%">-->
-        <span class="block1-btn-text">
-          <img src="{{site.url}}{{site.baseurl}}/assets/images/block1_button_background.png" alt="ZOOMにて握手会を体験する（一日3部）">
-        </span>
-        <span class="block1-btn">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsRHOD9ZC0ELTXSh7_X4JA-YIPwar_mn3j1H-_cDPsos2lOA/viewform?usp=sf_link" target="_blank">
-            <img src="{{site.url}}{{site.baseurl}}/assets/images/block1_button.png" alt="申し込み">
-          </a>
-        </span>
+        <div class="block1-head">
+          <div class="block1-head-in">
+            <div class="pc-b1-big-text">あなたはアイドルグループ#FiKのメンバーです。<br>今日は握手会。アイドルとしてファンを楽しませよう！</div>
+            <div class="m-b1-big-text">あなたは#FiKのメンバーです。<br>今日は握手会。<br>アイドルとしてファンを楽しませよう！</div>
+            <div class="b1-small-text">作品体験はZoomでおこないます。<br>ぜひお申し込みください！</div>
+            <div class="block1-btn">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsRHOD9ZC0ELTXSh7_X4JA-YIPwar_mn3j1H-_cDPsos2lOA/viewform?usp=sf_link" target="_blank">
+                <img src="{{site.url}}{{site.baseurl}}/assets/images/block1_button.png" alt="申し込み">
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="block1-tit">
         <img src="{{site.url}}{{site.baseurl}}/assets/images/block1_tit.png" width="100%" alt="#FiK">
@@ -30,7 +33,6 @@ layout: default
       
 
       <div id="block2">
-        <!--<img src="/assets/images/b2_bg.svg" width="100%" height="100%">-->
         <div class="block2-top-video">
           <div class="video-wrap">
             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ELtyrpuX20A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -39,7 +41,7 @@ layout: default
         <div class="block2-btn">
           <div class="block2-btn-only">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsRHOD9ZC0ELTXSh7_X4JA-YIPwar_mn3j1H-_cDPsos2lOA/viewform?usp=sf_link" target="_blank">
-              <img src="{{site.url}}{{site.baseurl}}/assets/images/block2_button.png" alt="申し込み">
+              <img src="/assets/images/block2_button.png" alt="申し込み">
             </a>
           </div>
         </div>
@@ -56,7 +58,7 @@ layout: default
             ⑤ルール説明が終わったら、指定されたブレイクアウトルームに入って少し待っていてね。ファンと運営が入ってきたら、体験スタート！選んだ台本に沿ってファンとの交流を楽しんで！<br>
             ⑥体験が終わったら終了！#(登録したニックネーム)_FiK でTwitterでエゴサしてみたらファンの反応が見れるかも！<br>
           </div>
-          <button id="introduction-btn">more</button>
+          <button id="introduction-btn">もっと見る+</button>
         </div>
       </div>
       <div class="block2-tit">
@@ -65,11 +67,10 @@ layout: default
       
 
       <div id="block3">
-        <!--<img src="/assets/images/b3_bg.svg" width="100%" height="100%">-->
         <div id="tab">
           <div id="tab-header">  
             <ul id="tab-header-li">  
-                <li id="tab1" value="1" class="selected">①初めて特典会にきたファン</li>  
+                <li id="tab1" value="1" class="selected">①初めて来たファン</li>  
                 <li id="tab2" value="2">②常連ファン</li>  
                 <li id="tab3" value="3">③久しぶりのファン</li>  
             </ul>  
@@ -124,20 +125,7 @@ layout: default
     <script type="text/javascript">
       $(document).ready(function(){
         $("#introduction-btn").click(function(){
-        $("#introduction").slideToggle();
-        if ($("#introduction-btn").text() == "more") {
-          $("#block2").css("grid-row-end","span 12");
-          $("#block3").css("grid-row-start","18");
-          $("#footer").css("grid-row-start","26");
-          $("#block3-tit").css("grid-row-start","17");
-          $("#introduction-btn").text("less");
-        } else {
-          $("#block2").css("grid-row-end","span 10");
-          $("#block3").css("grid-row-start","16");
-          $("#footer").css("grid-row-start","23");
-          $("#block3-tit").css("grid-row-start","15");
-          $("#introduction-btn").text("more");
-        }
+          $("#introduction").slideToggle();
         });
       });
     </script>
