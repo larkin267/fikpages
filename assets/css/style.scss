@@ -319,6 +319,7 @@ img {
     }
 
     #block1 {    
+        border-radius: 30px;
         padding: 4px;
         box-shadow: 4px 4px 4px 0px #FFFFFF40;
         grid-template-columns: 12px repeat(6, 1fr) 12px;
@@ -347,6 +348,7 @@ img {
 
     #block2 {
         padding: 4px;
+        border-radius: 30px;
         box-shadow: -4px 4px 4px 0px #FFFFFF40;
         grid-template-columns: 12px repeat(6, 1fr) 12px;
         grid-auto-rows: 50px; // equals to #block3
@@ -368,6 +370,7 @@ img {
 
     #block3 {
         padding: 4px;
+        border-radius: 30px;
         box-shadow: -4px 4px 4px 0px #FFFFFF40;
 
         grid-template-columns: 12px repeat(6, 1fr) 12px;

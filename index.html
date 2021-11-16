@@ -35,7 +35,7 @@ layout: default
       <div id="block2">
         <div class="block2-top-video">
           <div class="video-wrap">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ELtyrpuX20A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LIPY99sGBII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div class="block2-btn">
@@ -126,6 +126,11 @@ layout: default
       $(document).ready(function(){
         $("#introduction-btn").click(function(){
           $("#introduction").slideToggle();
+          if ($("#introduction-btn").text() == "もっと見る+") {
+            $("#introduction-btn").text("戻す-");
+          } else {
+            $("#introduction-btn").text("もっと見る+");
+          }
         });
       });
     </script>
