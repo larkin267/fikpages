@@ -34,7 +34,7 @@
     
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 100px 200px 100px;
+    grid-template-rows: 80px 200px 80px;
     grid-auto-rows: 100px;
     
 }
@@ -116,7 +116,7 @@ img {
 
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 100px auto 100px auto 100px;
+    grid-template-rows: 80px auto 90px auto 80px;
     grid-auto-rows: 100px;
 
     border-style: none;
@@ -220,7 +220,7 @@ img {
     
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 100px auto 100px; 
+    grid-template-rows: 80px auto 80px; 
     grid-auto-rows: 100px;
 
     border-style: none;
@@ -254,7 +254,7 @@ img {
 #tab-header-li li{
     float: left;
     list-style: none;
-    width: 33%;
+    width: 25%;
     height: 2em;
     cursor: pointer;
     text-align: center;
@@ -379,7 +379,7 @@ img {
     }
 
     #tab-header-li li{
-        height: 2.8em;
+        height: 2.4em;
 
         font-size: 1.8em;
     }
