@@ -116,7 +116,7 @@ img {
 
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 80px auto 90px auto 80px;
+    grid-template-rows: 80px auto 120px auto 80px;
     grid-auto-rows: 100px;
 
     border-style: none;
@@ -149,6 +149,16 @@ img {
     padding-top: 22px;
     width: 40.8%;
     height: 100%;
+}
+
+.block2-under-btn {
+    font-size: 2.6em;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 0;
+    text-decoration : underline;
 }
 
 .block2-intro {
